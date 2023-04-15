@@ -1,5 +1,6 @@
 .list-group-item {
-    padding: 15px 20px;
+    width: 100%;
+    padding: 15px 8px;
     border-bottom: 1px solid #3d5a80;
 }
 
@@ -8,15 +9,18 @@
 }
 
 .list-group-item span {
+    display: block;
+    width: 100%;
     line-height: 35px;
-    font-size: 20px;
     cursor: pointer;
-    min-width: 550px;
+    font-size: 1.25rem;
 }
 
 .list-group-item input {
+    display: block;
+    width: 100%;
     line-height: 35px;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     border: 0;
 }
@@ -25,7 +29,7 @@
     width: 35px;
     height: 35px;
     margin: 3px;
-    font-size: 17px;
+    font-size: 1.0625rem;
     border: none;
     cursor: pointer;
 }
@@ -62,4 +66,16 @@
 .list-group-item.increase .btn-star {
     color: #aeaeae;
 }
+
+
+
+@media (max-width: 767px) {
+    .list-group-item span, .list-group-item input {
+        line-height: 30px;
+        font-size: 1.125rem;
+    }
+}
+
+
+
   

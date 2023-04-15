@@ -7,6 +7,7 @@ import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 import './app.css';
 
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -81,7 +82,7 @@ class App extends Component {
             case 'rise':
                 return items.filter(item => item.rise);
             case 'moreThen1000':
-                return items.filter(item => item.salary > 1000);
+                return items.filter(item => item.salary > 70000);
             default:
                 return items;
         }

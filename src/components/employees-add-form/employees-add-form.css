@@ -12,6 +12,12 @@
 }
 
 .add-form input {
-    width: 350px;
+    width: 100%;
     margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .add-form {
+        margin-top: 35px;
+    }
 }

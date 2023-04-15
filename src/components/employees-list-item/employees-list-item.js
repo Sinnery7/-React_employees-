@@ -16,7 +16,7 @@ class EmployeesListItem extends Component {
     render() {
         const {name, onDelete, onToggleIncrease, onToggleRise, increase, rise} = this.props;
 
-        let classNames = 'list-group-item d-flex justify-content-between';
+        let classNames = 'list-group-item d-flex flex-wrap justify-content-between';
         if (rise) {
             classNames += ' like'
         }
@@ -25,20 +25,30 @@ class EmployeesListItem extends Component {
         }
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={onToggleRise}>{name}</span>
-                <input type="text" className="list-group-item-input" value={this.state.salary} onChange={this.onUpdateSalary}/>
-                <div className='d-flex justify-content-center align-items-center'>
-                    <button type="button"
-                            className="btn-cookie btn-sm "
-                            onClick={onToggleIncrease}>
-                        <i className="fas fa-cookie"></i>
-                    </button>
-                    <button type="button"
-                            className="btn-trash btn-sm "
-                            onClick={onDelete}>
-                        <i className="fas fa-trash"></i>
-                    </button>
-                    <i className="fas fa-star"></i>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-7 col-md-6 col-6">
+                            <span className="list-group-item-label" onClick={onToggleRise}>{name}</span>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-6">
+                            <input type="text" className="list-group-item-input" value={this.state.salary} onChange={this.onUpdateSalary}/>
+                        </div>
+                        <div className="col-lg-2 col-md-3 col-6 mt-md-0 mt-2">
+                            <div className='d-flex justify-content-start justify-content-md-end align-items-center gap-md-0 gap-3'>
+                                <button type="button"
+                                        className="btn-cookie btn-sm "
+                                        onClick={onToggleIncrease}>
+                                    <i className="fas fa-cookie"></i>
+                                </button>
+                                <button type="button"
+                                        className="btn-trash btn-sm "
+                                        onClick={onDelete}>
+                                    <i className="fas fa-trash"></i>
+                                </button>
+                                <i className="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </li>
         )

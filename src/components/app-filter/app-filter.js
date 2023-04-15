@@ -19,7 +19,7 @@ const AppFilter = (props) => {
         )
     })
     return (
-        <div className="btn-group">
+        <div className="btn-group d-inline-flex flex-wrap">
             {buttons}
         </div>
     )

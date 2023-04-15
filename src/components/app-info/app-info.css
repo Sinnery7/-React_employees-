@@ -5,3 +5,9 @@
     box-shadow: 15px 15px 30px rgba(0,0,0, .15);
     color: #fff;
 }
+
+@media (max-width: 767px) {
+    .app-info h1, .app-info h2:nth-child(2) {
+        margin-bottom: 15px;
+    }
+}
